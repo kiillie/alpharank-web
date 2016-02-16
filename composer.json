@@ -1,0 +1,16 @@
+{
+  "name": "wpcloud/www.wpcloud.io",
+  "type": "static-site",
+  "homepage": "https://github.com/usabilitydynamics/www.alpharank.io",
+  "description": "Main alpharank.io site",
+  "config": {
+    "docker": {
+      "scripts": {
+        "start": [ 
+          "ln -sf /var/www/static/keys/git /home/core/.ssh/git",
+          "ln -sf /var/www/static/keys/id_rsa /home/core/.ssh/id_rsa"
+        ]
+      }
+    }
+  }
+}

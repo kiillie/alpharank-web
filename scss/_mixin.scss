@@ -1,0 +1,27 @@
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin transition($time, $effect) {
+	transition: $time $effect;
+	-webkit-transition:  $time $effect;
+	-moz-transition:  $time $effect;
+	-o-transition:  $time $effect;
+	-ms-transition:  $time $effect;
+}
+
+@mixin vertical-align() {
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+@mixin preserve-parent() {
+	-webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}

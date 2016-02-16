@@ -1,0 +1,145 @@
+
+.modal{
+  .modal-dialog{
+    width: 600px;
+    margin: 10% auto;
+  }
+  .modal-content{
+    background-color: $darkblue;
+
+    .right{
+      float: right;
+    }
+    .left{
+      float: left;
+    }
+    .clear{
+      clear: both;
+    }
+    .modal-body{
+      margin-top: 25px;
+      padding: 15px 15px 40px;
+      .bround{
+        display: inline-block;
+        padding: 10px 35px;
+        border-radius: 30px;
+        font-size: 1.4em;
+        text-transform: uppercase;
+        font-family: 'Gotham-Bold';
+        letter-spacing: 0.05em;
+        margin: 0 auto;
+      }
+    }
+    .mheader{
+      padding: 40px 40px 0 40px;
+      text-align: center;
+      img{
+        margin: 0 auto;
+        display: inline-block;
+      }
+      h2{
+        text-align: center;
+        color: $white;
+        margin: 0;
+      	font-size: 1.8em;
+      	font-weight: 700;
+        padding: 20px 0 0;
+      	span {
+      		font-size: 1.1em;
+      		color: $lightgreen;
+        }
+      }
+    }
+    .input-group{
+      color: $white;
+      input[type="checkbox"]{
+        margin-left: 15px;
+      }
+      .form-control{
+        margin: 10px 0;
+      }
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-control {
+      height: 50px;
+      border-radius: 2px;
+      background: $lighterdark;
+      color: $white;
+      font-family: Raleway, sans-serif;
+      font-size: 1.4em;
+      font-weight: 600;
+      color: #fff;
+      letter-spacing: 0.075em;
+      &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        color: $white;
+      }
+      &::-moz-placeholder { /* Firefox 19+ */
+        color: $white;
+      }
+      &:-ms-input-placeholder { /* IE 10+ */
+        color: $white;
+      }
+      &:-moz-placeholder { /* Firefox 18- */
+        color: $white;
+      }
+
+    }
+    form{
+      margin: 0 0 25px 0;
+      padding: 10px 35px;
+      input{
+        border: none;
+      }
+      input[type="checkbox"]{
+        vertical-align: bottom;
+      }
+      input[type="checkbox"]:checked + span:after{
+        color: $white;
+        background: $lightgreen;
+      }
+      .form-submit{
+        margin: 0 auto;
+        margin-top: 30px;
+      }
+    }
+    .signup-note{
+      font-size: 1.2em;
+      text-align: center;
+      p {
+        color: $white;
+        font-size: 1em;
+        letter-spacing: 0.075em;
+        font-family: "Raleway", sans-serif;
+      }
+    }
+    .user-recover {
+      padding: 0 35px;
+      color: $white;
+      font-size: 1em;
+      letter-spacing: 0.075em;
+      font-family: "Raleway", sans-serif;
+      a, span {
+        color: $white;
+        font-size: 12px;
+        letter-spacing: 0.075em;
+        font-family: "Raleway", sans-serif;
+      }
+      a.cgreen{
+        color: $lightgreen;
+      }
+    }
+
+  }
+  .close {
+    position: absolute;
+    right: 40px;
+    outline: none;
+  }
+  .cgreen {
+    &:hover, &:focus {
+      text-decoration: underline;
+    }
+  }
+}

@@ -1,0 +1,145 @@
+.user-page {
+	background: $darkblue;
+}
+.user-pagecont {
+  padding: 180px 0 100px;
+}
+.user-hcont {
+	margin-bottom: 140px;
+	h2 {
+    font-size: 4.8em;
+    max-width: 770px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 65px;
+    color: $white;
+    .cgreen {
+    	font-size: 1.1em;
+    	font-weight: 900;
+    }
+	}
+}
+.avail-integ {
+	margin-bottom: 80px;
+  border-bottom: 1px solid rgba(255,255,255,0.20);
+  h3 {
+  	margin: 4px 0 0;
+    font-size: 2.6em;
+    letter-spacing: 0.05em;
+    color: $white;
+    font-weight: 400;
+    font-family: Gotham-Medium, sans-serif;
+  }
+}
+.fsearch-box {
+  position: relative;
+  .form-control {
+  	border-radius: 2px;
+    background: $lighterdark;
+    border: none;
+    height: 50px;
+    color: $white;
+    letter-spacing: 0.075em;
+  }
+  .btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    color: $white;
+    @include transition(.3s, ease-in-out);
+    &:hover {
+    	background: $darkgreen;
+    	border-color: transparent;
+    }
+  }
+}
+.ecommerce-grid {
+	margin-bottom: 40px;
+	.ebox {
+    position: relative;
+    margin-bottom: 30px;
+    height: 290px;
+    background: #414141;
+    border-radius: 4px;
+    padding: 15px;
+    overflow: hidden;
+    .img-cont {
+      position: absolute;
+	    top: 0;
+	    bottom: 0;
+	    left: 0;
+	    right: 0;
+	    display: flex;
+	    justify-content: center; /* align horizontal */
+	    align-items: center; /* align vertical */
+      padding: 20px;
+    }
+    .ehover {
+    	position: absolute;
+	    left: 0;
+	    right: 0;
+	    bottom: -100%;
+	    background: rgba(0,0,0,0.75);
+	    width: 100%;
+	    height: 100%;
+	    text-align: center;
+	    cursor: pointer;
+    	@include transition(.4s, ease-in-out);
+
+	    .fa {
+  	    display: block;
+		    margin: 65px auto;
+		    font-size: 5em;
+		    color: #fff;
+	    }
+	    .txt {
+	    	display: block;
+  	    color: #fff;
+		    font-size: 1.4em;
+		    letter-spacing: 0.05em;
+		    font-weight: 500;
+	    }
+      a {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    &:before {
+    	content: ' ';
+		  display: block;
+		  padding-top: 100%; /* forces 1:1 aspect ratio */
+    }
+    &:hover,
+    &:focus {
+    	.ehover {
+    		bottom: 0;
+    	}
+    }
+	}
+}
+.foot-block {
+	text-align: center;
+	p {
+		font-size: 1.8em;
+		color: $white;
+	}
+	.bround {
+    display: inline-block;
+    margin: 30px 0;
+    padding: 15px 52px;
+    border-radius: 40px;
+    font-size: 1.4em;
+    text-transform: uppercase;
+    font-family: 'Gotham-Medium';
+    letter-spacing: 0.05em;
+	}
+}
