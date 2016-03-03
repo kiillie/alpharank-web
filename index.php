@@ -45,7 +45,7 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               <ul class="nav navbar-nav navbar-right">
-                <li><a href="whitepapers.html">WHITE PAPERS</a></li>
+                <li><a href="whitepapers.htm">WHITE PAPERS</a></li>
                 <li><a href="about.htm">ABOUT</a></li>
                 <li><a href="contact.htm">CONTACT</a></li>
                 <li><a data-toggle="modal" data-target="#login">LOGIN</a></li>
