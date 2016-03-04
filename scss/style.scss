@@ -88,7 +88,12 @@ body { overflow-x: hidden; }
 
 // Navigation Top
 .pheader {
-	padding-top: 50px;
+  padding-top: 50px;
+  .page-nav-arrow {
+    background: transparent;
+    box-shadow: 0 0;
+    bottom: 5%;
+  }
 }
 .navbar {
 	padding: 10px 0;
@@ -111,6 +116,7 @@ body { overflow-x: hidden; }
 				font-size: 1.4em;
     		letter-spacing: 0.5px;
         outline: none;
+        text-transform: uppercase;
 				&:hover, &:focus {
 					color: $lightgreen;
 				}
@@ -156,6 +162,12 @@ body { overflow-x: hidden; }
           }
           &.signup {
             color: $white;
+          }
+        }
+        &.active {
+          a {
+            color: $lightgreen;
+            background: none;
           }
         }
       }
@@ -235,6 +247,9 @@ body { overflow-x: hidden; }
   			color: $lightgreen;
   		}
   	}
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }
 .arrow-down {
@@ -253,10 +268,11 @@ body { overflow-x: hidden; }
 /*-----------------------------------------------------------------------------------*/
 /*  Layout - > Contents
 /*-----------------------------------------------------------------------------------*/
-#hero-banner { margin-bottom: 0; background: #02b08c url(../img/featured-bg.png) 50% 50% no-repeat; background-size: cover; padding-top: 100px; padding-bottom: 100px; color: #fff; }
+
+#hero-banner { margin-bottom: 0; background: #02b08c url(../img/about_featured.jpg) 50% 50% no-repeat; background-size: cover; padding-top: 100px; padding-bottom: 100px; color: #fff; }
 #hero-banner h1 { font-size: 4.80rem; color: #fff; text-transform: uppercase; line-height: 1.4; margin-bottom: 1.6em; }
-#hero-banner .btn { background: #515151; border-color: #515151; width: 320px; text-transform: uppercase; padding: 25px 0; border-radius: 9px; font-size: 2rem; margin-bottom: 20px; }
-#hero-banner .btn:hover, #hero-banner .btn:focus { color: #02b08c; }
+#hero-banner .btn { font-family: 'Gotham-Bold';letter-spacing: 0.05em;background: $lightgreen; border: none; border-color: #515151; width: auto; text-transform: uppercase; padding: 17px 52px; border-radius: 40px; font-size: 1.4em; margin-bottom: 20px; }
+#hero-banner .btn:hover, #hero-banner .btn:focus { color: $white; background-color: $darkgreen; }
 #hero-banner p.download a { color: #fff; text-decoration: underline; }
 
 
@@ -284,6 +300,7 @@ body { overflow-x: hidden; }
 
 #section-2 { background: #515151;  }
 #section-3 { background: #00b18b; }
+#section-3 { background: url(../img/hero_bg4.jpg) no-repeat; }
 #section-3.page-block p, #section-3.page-block p.lead  { color: #c4eee5; }
 #section-4 { background: #515151;  }
 #section-5 { background: #02b08c url(../img/image-2.png) 0 50% no-repeat; color: #fff; }
@@ -334,7 +351,7 @@ body { overflow-x: hidden; }
 #section-7 .diagram08 { position: absolute; top: 0; left: 240px; }
 #section-7 .diagram6 { position: absolute; bottom: -65px; right: 0; z-index: 999; }
 
-#section-8 { background: #00b18b; }
+#section-8 { background: url(../img/hero_bg4.jpg) no-repeat; }
 #section-8 h4 { margin: 1em 0 1em; font-size: 5.850rem; }
 #section-8 h5 { font-size: 2.60rem;  color: #fff; }
 #section-8 .row > div { text-align: center; }
@@ -408,8 +425,8 @@ body { overflow-x: hidden; }
 
 
 /* Inner Page - Contact */
-.contact .inner-wrap { padding-top: 100px; padding-bottom: 120px; }
-.contact #hero-banner { background-image: url(../img/map.jpg); padding-top: 65px!important; }
+.contact .inner-wrap { padding-top: 100px; padding-bottom: 120px; } 
+.contact #hero-banner { background-image: url(../img/map.jpg); padding-top: 115px!important; }
 .contact .offices { margin-left: 40px; }
 .contact .offices h3 { text-align: left; font-size: 2.950rem; padding: 15px 25px; }
 .offices .list-group-item { border-left: 0; border-right: 0; padding: 22px; text-align: left; }
@@ -430,7 +447,7 @@ body { overflow-x: hidden; }
 .contact form .btn { font-size: 2.40rem; padding: 20px 100px; margin-top: 20px; font-weight: normal; }
 
 /* Inner Page -> Whitepaper */
-.whitepaper #hero-banner { padding-top: 0!important; padding-bottom: 0; background-size: initial; background-image: url(../img/whitepaper.jpg); background-position: 50% 100%; }
+.whitepaper #hero-banner { padding-top: 0!important; padding-bottom: 0; background-size: initial; background-image: url(../img/whitepaper_v1.jpg); background-position: 50% 100%; }
 .whitepaper #hero-banner > div { padding-top: 100px; padding-bottom: 120px; }
 .whitepaper .inner-wrap { padding-top: 100px; padding-bottom: 120px; }
 .whitepaper #hero-banner h1 {  text-transform: initial; margin-bottom: .20em; margin-top: 0; }
@@ -482,7 +499,7 @@ body { overflow-x: hidden; }
    .diagram3_col { width: 48%; }
    .inner-page #hero-banner { padding: 150px 0 0; height: 560px; }
    .whitepaper.detail #hero-banner { height: 680px; }
-   .whitepaper #hero-banner > div { padding-top: 100px; }
+   .whitepaper #hero-banner > div { padding-top: 180px; }
 
 }
 
@@ -627,3 +644,8 @@ body { overflow-x: hidden; }
 @media screen and (max-width: 360px) { 
    .diagram3, .diagram2, .diagram01 { left: -25%; width: 145%; }
 }
+
+/*-----------------------------------------------------------------------------------*/
+/*  Responsive (Media queries)
+/*-----------------------------------------------------------------------------------*/
+@import "media-queries";

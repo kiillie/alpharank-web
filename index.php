@@ -39,7 +39,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <h1 class="navbar-brand"><a class="" href="/"><img class="img-white" src="img/alpharank_white_logo.png" alt="Alpharank Logo"><img class="img-dark" src="img/logo.png" alt="Alpharank Logo"></a></h1>
+              <h1 class="navbar-brand"><a class="" href="index.php"><img class="img-white" src="img/alpharank_white_logo.png" alt="Alpharank Logo"><img class="img-dark" src="img/logo.png" alt="Alpharank Logo"></a></h1>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -48,8 +48,6 @@
                 <li><a href="whitepapers.htm">WHITE PAPERS</a></li>
                 <li><a href="about.htm">ABOUT</a></li>
                 <li><a href="contact.htm">CONTACT</a></li>
-                <li><a data-toggle="modal" data-target="#login">LOGIN</a></li>
-                <li><a data-toggle="modal" data-target="#signup" class="signup bround" href="#">SIGN UP</a></li>
               </ul>
             </div><!-- /.navbar-collapse -->
           </div><!-- /.container-fluid -->
@@ -59,8 +57,9 @@
           <span class="f-block"><a class="bround" href="mailto:lauerb@alpharank.io?Subject=AlphaRank%20Demo&Body=I%27m%20interested%20in%20learning%20more%20about%20AlphaRank%21">Request a demo</a></span>
           <span class="f-block"><a class="dlink" href="/whitepapers.htm">Download our white papers</a></span>
         </div>
-        <span class="arrow-down"><img src="img/arrow_down.png" alt=""></span>
-        
+        <div class="page-nav-arrow">
+          <a  class="arrow-down" href="#intro-section"><img src="img/arrow_down.png" alt=""></a>
+        </div><!--end /page-nav-arrow-->
       </header>
     </section>
 
@@ -231,9 +230,9 @@
                 <div class="col-sm-3">
                    <nav class="footer-nav">
                       <ul>
-                        <li><a href="/whitepapers.htm">White Papers</a></li>
-												<li><a href="/about.htm">About</a></li>
-												<li><a href="/contact.htm">Contact</a></li>
+                        <li><a href="whitepapers.htm">White Papers</a></li>
+												<li><a href="about.htm">About</a></li>
+												<li><a href="contact.htm">Contact</a></li>
                       </ul>
                    </nav>
                 </div>
@@ -262,102 +261,26 @@
 
       </footer><!--end /pagefooter-->
 
-        
-    <div id="login" class="modal fade" role="dialog">
-
-      <div class="modal-dialog">
-        <!-- Modal content-->
-        <div class="modal-content">
-          <div class="mheader">
-            <button type="button" class="close" data-dismiss="modal"><img class="right" src="img/close_button.png"></button>
-            <img src="img/alpharank_white_logo.png">
-            <h2>Login to Alpha<span>rank</span></h2>
-          </div>
-          <div class="modal-body">
-            <form name="login" method="post">
-              <div class="form-group">
-                <input type="email" class="form-control" placeholder="Email">
-              </div>
-              <div class="form-group">
-                <input type="password" class="form-control" placeholder="Password">
-              </div>
-              <div class="input-group">
-                <input type="checkbox"> <span> Keep me log in</span>
-              </div>
-              <div class="input-group form-submit">
-                <input type="button" class="bround" value="LOGIN">
-              </div>
-            </form>
-            <div class="user-recover clearfix">
-              <a href="#" class="left">Forgot Password?</a>
-              <span class="right">Don't have an account? <a class="cgreen" href="#">Sign Up</a></span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div><!-- Modal Login End-->
-    
-    <div id="signup" class="modal fade" role="dialog">
-
-      <div class="modal-dialog">
-        <!-- Modal content-->
-
-        <div class="modal-content">
-          <div class="mheader">
-            <button type="button" class="close" data-dismiss="modal"><img class="right" src="img/close_button.png"></button>
-            <img class="img-responsive" src="img/alpharank_white_logo.png">
-            <h2>Login to Alpha<span>rank</span></h2>
-          </div>
-          <div class="modal-body">
-            <form name="signup" method="post">
-              <div class="row">
-                <div class="form-group col-xs-12 col-md-6 col-lg-6">
-                    <input type="text" class="form-control" placeholder="First Name">
-                </div>
-                <div class="form-group col-xs-12 col-md-6 col-lg-6">
-                    <input type="text" class="form-control" placeholder="Last Name">
-                </div>
-                <div class="form-group col-xs-12">
-                  <input type="email" class="form-control" placeholder="Email">
-                </div>
-                <div class="form-group col-xs-12">
-                <input type="password" class="form-control" placeholder="Password">
-                </div>
-                <div class="form-group col-xs-12">
-                <input type="password" class="form-control" placeholder="Confirm Password">
-                </div>
-              </div>
-              <div class="input-group form-submit">
-                <input type="button" class="bround" value="SIGN UP">
-              </div>
-            </form>
-            <div class="signup-note">
-              <p>By clicking 'Sign Up' you agree to Alpharank's <a href="" class="cgreen">Terms and Condition</a></p>
-              <p>Already have an account? <a class="cgreen" data-toggle="modal" data-target="#login">Log In</a></p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div><!-- Modal Signup End-->
-    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
     <script>
-      $(document).ready(function(){
+       $(function() {
         var pcont = $('.page-content').offset();
 
-        $(window).bind('scroll', function() {
-        var scrollTop = $(this).scrollTop();
+        // Scroll Nav
+        var pcont = $('.page-content').offset();
 
-        var scrolled = (scrollTop > 150)  ? $('#main-nav .navbar-default').addClass('scrolled') : $('#main-nav .navbar-default').removeClass('scrolled');
-        if(scrollTop > pcont.top - 100) {
-          $('#main-nav .navbar-default').addClass('navbar-fixed-top');
-        } else {
-          $('#main-nav .navbar-default').removeClass('navbar-fixed-top');
-        }
-      });
+          $(window).bind('scroll', function() {
+          var scrollTop = $(this).scrollTop();
+
+          var scrolled = (scrollTop > 150)  ? $('#main-nav .navbar-default').addClass('scrolled') : $('#main-nav .navbar-default').removeClass('scrolled');
+          if(scrollTop > pcont.top - 100) {
+            $('#main-nav .navbar-default').addClass('navbar-fixed-top');
+          } else {
+            $('#main-nav .navbar-default').removeClass('navbar-fixed-top');
+          }
+        });
       });
     </script>
   </body>
